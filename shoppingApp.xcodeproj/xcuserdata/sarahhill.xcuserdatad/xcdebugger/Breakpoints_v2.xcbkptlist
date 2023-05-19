@@ -14,10 +14,7 @@
             filePath = "shoppingApp/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "loadData()"
-            landmarkType = "7">
+
             <Locations>
                <Location
                   uuid = "D8F34996-3E8A-45FC-9CEE-94F8BED60545 - 651b2b5b64a7337f"
