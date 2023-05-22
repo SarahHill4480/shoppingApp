@@ -7,11 +7,19 @@
 
 import Foundation
 
-struct Products {
-    let Brand: String
-    let Title: String
-    let Description: String
-    let Price: Float
-    let stock: number
-    let images: Image
+struct Product: Codable, Identifiable {
+    let id = UUID()
+    let brand: String
+    let title: String
+    let description: String
+    let price: Int
+    let stock: Int
+    let images: [URL]
+}
+
+
+extension URL: Identifiable {
+  public var id: String {
+    return self.absoluteString
+  }
 }
