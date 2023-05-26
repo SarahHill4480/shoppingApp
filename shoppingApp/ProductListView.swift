@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ProductListView: View {
     @State private var products = [Product]() //This property will hold the products loaded from JSON response
-    
+    let productInteractor = RealProductInteractor()
     
     
     var body: some View {
@@ -47,10 +47,9 @@ struct ProductListView: View {
             
             //task modifier to call loadData.
             .task {
-                await loadData { products in
-                    // Assign the received products to the self.products property
-                    self.products = products
-                }
+                self.products = await productInteractor.loadData()
+               
+                
             }
             .navigationTitle("Product List")
         }
